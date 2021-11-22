@@ -1,0 +1,6 @@
+Tested with 400 images 
+Original images: 200
+Forged imageas: 200
+Accuracy: 0.745
+True Positive Rate: 0.95
+False Positive Rate: 0.46
