@@ -15,7 +15,7 @@ Place any(JPEG) images that you wish to analyze into the **image** folder Presen
 
 Navigate to the **DBSCAN** directory:
 ```
-$ cd src
+$ cd DBSCAN
 ```
 
 Next, run the **detect.py** script, providing the image you wish to evaluate:
