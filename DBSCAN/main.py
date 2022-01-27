@@ -83,13 +83,13 @@ PrintBoundary()
 # Metadata Analysis detection End
 
 
-# # CFA artifact detection Start
-# PrintBoundary()
-# print('\nRunning CFA artifact detection...\n')
-# identical_regions_cfa = copy_move_cfa.detect(input, opt, args)
-# print('\n' + str(identical_regions_cfa), 'CFA artifacts detected')
-# PrintBoundary()
-# # CFA artifact detection End
+# CFA artifact detection Start
+PrintBoundary()
+print('\nRunning CFA artifact detection...\n')
+identical_regions_cfa = copy_move_cfa.detect(input, opt, args)
+print('\n' + str(identical_regions_cfa), 'CFA artifacts detected')
+PrintBoundary()
+# CFA artifact detection End
 
 
 
@@ -110,76 +110,76 @@ PrintBoundary()
 
 # Copy-Move detection Start
 
-# eps = 60
-# min_samples = 2
+eps = 60
+min_samples = 2
 
-# PrintBoundary()
-# print('Use \'q\' for exit and\n\'s/S\' for saving the Forgery Detected.')
-# PrintBoundary()
-# flag = True
+PrintBoundary()
+print('Use \'q\' for exit and\n\'s/S\' for saving the Forgery Detected.')
+PrintBoundary()
+flag = True
 
-# try:
-#     value = sys.argv[2]
+try:
+    value = sys.argv[2]
 
-# except IndexError:
-#     flag = False
-# if flag:
-#     try:
-#         value = int(value)
-#         if(value < 0 or value > 500):
-#             print('Value not in range (0,500)........ using default value.')
-#         else:
-#             eps = value
-#     except ValueError:
-#         print('Value not integer........ using default value.')
+except IndexError:
+    flag = False
+if flag:
+    try:
+        value = int(value)
+        if(value < 0 or value > 500):
+            print('Value not in range (0,500)........ using default value.')
+        else:
+            eps = value
+    except ValueError:
+        print('Value not integer........ using default value.')
 
-# flag2 = True
-# try:
-#     value = sys.argv[3]
-# except IndexError:
-#     flag2 = False
+flag2 = True
+try:
+    value = sys.argv[3]
+except IndexError:
+    flag2 = False
 
-# if flag2:
-#     try:
-#         value = int(value)
-#         if(value < 0 or value > 50):
-#             print('Value not in range (0,50)........ using default value.')
-#         else:
-#             min_samples = value
-#     except ValueError:
-#         print('Value not integer........ using default value.')
+if flag2:
+    try:
+        value = int(value)
+        if(value < 0 or value > 50):
+            print('Value not in range (0,50)........ using default value.')
+        else:
+            min_samples = value
+    except ValueError:
+        print('Value not integer........ using default value.')
 
-# PrintBoundary()
-# print('Detecting Copy-Move Forgery with parameter value as\neps:{}\nmin_samples:{}'.format(
-#     eps, min_samples))
-# PrintBoundary()
+PrintBoundary()
+print('Detecting Copy-Move Forgery with parameter value as\neps:{}\nmin_samples:{}'.format(
+    eps, min_samples))
+PrintBoundary()
 
-# detect = Detect(input)
+detect = Detect(input)
 
-# key_points, descriptors = detect.siftDetector()
+key_points, descriptors = detect.siftDetector()
 
-# forgery = detect.locateForgery(eps, min_samples)
-# if forgery is None:
-#     sys.exit(0)
-# cv2.imshow('Original image', detect.image)
-# cv2.imshow('Forgery', forgery)
-# wait_time = 1000
-# while(cv2.getWindowProperty('Forgery', 0) >= 0) or (cv2.getWindowProperty('Original image', 0) >= 0):
-#     keyCode = cv2.waitKey(wait_time)
-#     if (keyCode) == ord('q') or keyCode == ord('Q'):
-#         cv2.destroyAllWindows()
-#         break
-#     elif keyCode == ord('s') or keyCode == ord('S'):
-#         name = re.findall(r'(.+?)(\.[^.]*$|$)', file_name)
-#         date = datetime.today().strftime('%Y_%m_%d_%H_%M_%S')
-#         new_file_name = name[0][0]+'_'+str(eps)+'_'+str(min_samples)
-#         new_file_name = new_file_name+'_'+date+name[0][1]
-#         PrintBoundary()
+forgery = detect.locateForgery(eps, min_samples)
+if forgery is None:
+    sys.exit(0)
+cv2.imshow('Original image', detect.image)
+cv2.imshow('Forgery', forgery)
+wait_time = 1000
+while(cv2.getWindowProperty('Forgery', 0) >= 0) or (cv2.getWindowProperty('Original image', 0) >= 0):
+    keyCode = cv2.waitKey(wait_time)
+    if (keyCode) == ord('q') or keyCode == ord('Q'):
+        cv2.destroyAllWindows()
+        break
+    elif keyCode == ord('s') or keyCode == ord('S'):
+        name = re.findall(r'(.+?)(\.[^.]*$|$)', file_name)
+        date = datetime.today().strftime('%Y_%m_%d_%H_%M_%S')
+        new_file_name = name[0][0]+'_'+str(eps)+'_'+str(min_samples)
+        new_file_name = new_file_name+'_'+date+name[0][1]
+        PrintBoundary()
 
-#         vaue = cv2.imwrite(new_file_name, forgery)
-#         print('Image Saved as....', new_file_name)
+        vaue = cv2.imwrite(new_file_name, forgery)
+        print('Image Saved as....', new_file_name)
 
-# cv2.destroyAllWindows()
+cv2.destroyAllWindows()
 # Copy-Move detection End
 
 
