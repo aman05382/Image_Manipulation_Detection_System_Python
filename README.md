@@ -6,21 +6,21 @@ The forgery detection tool contained in this repository currently features foren
 
 - Double JPEG compression
 - Copy-move forgeries
+- Metadata Analysis
 - CFA artifacts
 - Noise variance inconsitencies
 
-
 ## To Run:
-Place any images that you wish to analyze into the **images** directory.
+Place any(JPEG) images that you wish to analyze into the **image** folder Present in the Project directory.
 
-Navigate to the **src** directory:
+Navigate to the **DBSCAN** directory:
 ```
 $ cd src
 ```
 
 Next, run the **detect.py** script, providing the image you wish to evaluate:
 ```
-$ python detect.py image.jpg
+$ python main.py image.jpg
 ```
 
 Once finished, details on the image will be reported in the terminal. Supplemental images generated during copy-move forgery detection can be found in the output directory.
