@@ -38,5 +38,7 @@ class Detect(object):
         for points in cluster_list:
             if len(points) > 1:
                 for idx1 in range(1, len(points)):
-                    cv2.line(forgery, points[0], points[idx1], (255, 0, 0), 5)
+                    # Green color in BGR
+                    cv2.line(forgery, points[0], points[idx1], (0, 255, 0), 5)
+                    # cv2.line(forgery, points[0], points[idx1], (255, 0, 0), 5)
         return forgery
