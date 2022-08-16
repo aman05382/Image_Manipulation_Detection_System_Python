@@ -1,0 +1,31 @@
+ExifVersion : b'0210'
+ComponentsConfiguration : b'\x01\x02\x03\x00'
+ApertureValue : (116, 100)
+DateTimeOriginal : 2019:10:24 13:37:36
+DateTimeDigitized : 2019:10:24 13:37:36
+ExposureBiasValue : (0, 10000000)
+UserComment : b'oppo_0'
+FlashPixVersion : b'0100'
+ColorSpace : 65535
+Flash : 16
+FocalLength : (428, 100)
+ExifImageWidth : 0
+ExifImageHeight : 0
+ImageWidth : 4608
+ImageLength : 3456
+Make : realme
+SubsecTime : 84000
+SubsecTimeOriginal : 84000
+SubsecTimeDigitized : 84000
+Model : realme 3 Pro
+Orientation : 1
+YCbCrPositioning : 1
+ExposureTime : (10000, 1000000)
+XResolution : (72, 1)
+YResolution : (72, 1)
+FNumber : (17, 10)
+ISOSpeedRatings : 155
+ResolutionUnit : 2
+ExifOffset : 204
+WhiteBalance : 0
+DateTime : 2019:10:24 13:37:36

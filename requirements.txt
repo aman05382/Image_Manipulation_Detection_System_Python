@@ -1,0 +1,8 @@
+matplotlib==3.3.2
+numpy==1.19.3
+opencv_python==4.5.4.60
+Pillow==9.2.0
+prettytable==3.2.0
+pyparsing==3.0.6
+scikit_learn==1.1.2
+scipy==1.4.1
