@@ -1,4 +1,4 @@
-# image-manipulation-detection-system
+# Image Manipulation (Forgery) Detection System
 Detecting and localizing image manipulation are necessary to counter malicious use of image editing techniques. Accordingly, it is essential to distinguish between authentic and tampered regions by analyzing intrinsic statistics in an image.
 
 # Image Forgery Detection Tool
@@ -16,9 +16,9 @@ The forgery detection tool contained in this repository currently features foren
 ## To Run:
 <!-- Place any(JPEG) images that you wish to analyze into the **image** folder Present in the Project directory. -->
 
-Navigate to the **DBSCAN** directory:
+Navigate to the **Project** directory:
 ```
-$ cd DBSCAN
+$ cd Image_Manipulation_Detection_System_Python
 ```
 
 Next, run the **detect.py** script, providing the image you wish to evaluate:
